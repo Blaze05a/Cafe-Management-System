@@ -1,0 +1,27 @@
+menu = {
+        'Pizza': 90,
+        'Pasta': 70,
+        'Burger': 65,
+        'Salad': 50,
+        'Coffee': 45,
+        'Tea': 35,
+        'Water': 15,
+}
+print("WELCOME TO XYZ CAFE\n\nMENU\n");
+print("~ Pizza    Rs.90\n~ Pasta    Rs.70\n~ Burger   Rs.65\n~ Salad    Rs.50\n~ Coffee   Rs.45\n~ Tea      Rs.35\n~ Water    Rs.15\n\n");
+ot = 0;
+i1 = input("Enter the name of the item you want to order: ");
+if i1 in menu:
+    ot += menu[i1];
+    print(f"Your item {i1} has been added to your order.");
+else:
+    print(f"Ordered item {i1} is not available.");
+ao = input("Do you want to add another item (Yes/No): ");
+if ao == "Yes":
+    i2 = input("Enter the name of second item: ");
+    if i2 in menu:
+        ot += menu[i2];
+        print(f"Your item {i2} has been added to your order.");
+    else:
+        print(f"Ordered item {i2} is not available.");
+print(f"The total amount of item is {ot}.");
